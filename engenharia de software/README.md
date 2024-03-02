@@ -63,33 +63,33 @@ Custo Baixo: O SQLite é um banco de dados embutido que não requer configuraç�
 Simplicidade Boa: O SQLite é simples de usar e não exige configurações complexas.
 Ruim em Escala e Tolerância a Falhas: No entanto, o SQLite não é adequado para sistemas altamente concorrentes ou que precisam de alta escalabilidade e tolerância a falhas.
 
-SLIDE 26
+### SLIDE 26
 E que Software ela se aplica?
-Jekyll
+Jekyll\
 Porque baseado nos Trade-off
 Custo Baixo: O Jekyll é um gerador de sites estáticos de código aberto e gratuito.
 Simplicidade Boa: Ele permite criar sites estáticos com facilidade, sem a necessidade de um servidor de banco de dados.
 Ruim em Escala e Tolerância a Falhas: No entanto, o Jekyll não é adequado para sites dinâmicos ou com grande volume de tráfego.
 
-SLIDE 27
+### SLIDE 27
 E que Software ela se aplica?
-Spring Boot
+Spring Boot\
 Porque baseado nos Trade-off
 Deployability (Implantação): O Spring Boot é um framework Java que simplifica a implantação de aplicativos. Ele incorpora um servidor embutido (como o Tomcat) e oferece opções de empacotamento (como JAR ou WAR) para facilitar a implantação.
 Modularidade: O Spring Boot permite criar aplicativos modulares usando módulos Spring. Você pode escolher os módulos específicos necessários para o seu projeto.
 Custo: O Spring Boot é de código aberto e gratuito.
 Testabilidade: O Spring Boot oferece suporte a testes unitários e integração, permitindo que você escreva testes robustos para suas funcionalidades.
 
-SLIDE 28
+### SLIDE 28
 E que Software ela se aplica?
-Hadoop (HDFS e MapReduce)
+Hadoop (HDFS e MapReduce)\
 Porque baseado nos Trade-off
 Complexidade: O ecossistema Hadoop, incluindo o HDFS (Hadoop Distributed File System) e o MapReduce, é poderoso, mas também complexo. Ele é usado para processamento distribuído de grandes volumes de dados.
 Testabilidade: Testar aplicativos MapReduce pode ser complicado, pois envolve a divisão de tarefas em etapas de mapeamento e redução.
 
-SLIDE 29
+### SLIDE 29
 E que Software ela se aplica?
-Kubernetes
+Kubernetes\
 Porque baseado nos Trade-off
 Custo: Implementar e manter o Kubernetes pode envolver custos significativos, especialmente em termos de recursos humanos qualificados. No entanto, os benefícios de escalabilidade e tolerância a falhas podem justificar esses custos.
 Complexidade: Kubernetes é uma plataforma robusta e poderosa, mas isso também significa que é complexo. A curva de aprendizado pode ser íngreme, mas existem muitos recursos e comunidades ativas para suporte.
