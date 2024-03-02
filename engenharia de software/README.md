@@ -43,3 +43,59 @@ O **trade-off** é um conceito essencial em diversas áreas, incluindo o desenvo
 **Trade-off:** No caso de um banco de dados NoSQL como o MongoDB, a flexibilidade é um ponto forte, permitindo esquemas dinâmicos. No entanto, essa flexibilidade pode aumentar a vulnerabilidade a injeções de dados não desejados se não forem implementadas medidas de segurança adequadas.
 
 **Exemplo:** Permitir que usuários adicionem campos dinamicamente aos documentos MongoDB pode oferecer flexibilidade, mas se não forem tomadas precauções, isso pode resultar em vulnerabilidades de segurança.
+
+
+# ATIVIDADE 3
+
+SLIDE 24
+E que Software ela se aplica?
+Trello
+Porque baseado nos Trade-off
+O Trello é uma ferramenta popular para gestão de tarefas e projetos. Ele utiliza um sistema de quadros, listas e cartões para organizar informações.
+Simplicidade: Sua interface intuitiva permite que você crie e gerencie tarefas de forma rápida e fácil.
+Baixo Custo: O Trello oferece um plano gratuito com recursos básicos, tornando-o acessível para pequenas equipes e projetos individuais.
+
+SLIDE 25
+E que Software ela se aplica?
+SQLite
+Porque baseado nos Trade-off
+Custo Baixo: O SQLite é um banco de dados embutido que não requer configuração de servidor e é gratuito.
+Simplicidade Boa: O SQLite é simples de usar e não exige configurações complexas.
+Ruim em Escala e Tolerância a Falhas: No entanto, o SQLite não é adequado para sistemas altamente concorrentes ou que precisam de alta escalabilidade e tolerância a falhas.
+
+SLIDE 26
+E que Software ela se aplica?
+Jekyll
+Porque baseado nos Trade-off
+Custo Baixo: O Jekyll é um gerador de sites estáticos de código aberto e gratuito.
+Simplicidade Boa: Ele permite criar sites estáticos com facilidade, sem a necessidade de um servidor de banco de dados.
+Ruim em Escala e Tolerância a Falhas: No entanto, o Jekyll não é adequado para sites dinâmicos ou com grande volume de tráfego.
+
+SLIDE 27
+E que Software ela se aplica?
+Spring Boot
+Porque baseado nos Trade-off
+Deployability (Implantação): O Spring Boot é um framework Java que simplifica a implantação de aplicativos. Ele incorpora um servidor embutido (como o Tomcat) e oferece opções de empacotamento (como JAR ou WAR) para facilitar a implantação.
+Modularidade: O Spring Boot permite criar aplicativos modulares usando módulos Spring. Você pode escolher os módulos específicos necessários para o seu projeto.
+Custo: O Spring Boot é de código aberto e gratuito.
+Testabilidade: O Spring Boot oferece suporte a testes unitários e integração, permitindo que você escreva testes robustos para suas funcionalidades.
+
+SLIDE 28
+E que Software ela se aplica?
+Hadoop (HDFS e MapReduce)
+Porque baseado nos Trade-off
+Complexidade: O ecossistema Hadoop, incluindo o HDFS (Hadoop Distributed File System) e o MapReduce, é poderoso, mas também complexo. Ele é usado para processamento distribuído de grandes volumes de dados.
+Testabilidade: Testar aplicativos MapReduce pode ser complicado, pois envolve a divisão de tarefas em etapas de mapeamento e redução.
+
+SLIDE 29
+E que Software ela se aplica?
+Kubernetes
+Porque baseado nos Trade-off
+Custo: Implementar e manter o Kubernetes pode envolver custos significativos, especialmente em termos de recursos humanos qualificados. No entanto, os benefícios de escalabilidade e tolerância a falhas podem justificar esses custos.
+Complexidade: Kubernetes é uma plataforma robusta e poderosa, mas isso também significa que é complexo. A curva de aprendizado pode ser íngreme, mas existem muitos recursos e comunidades ativas para suporte.
+Escalabilidade: Kubernetes é conhecido por sua capacidade de escalar aplicativos de maneira eficiente. Ele automatiza a implantação, a escala e a gestão de aplicativos em contêineres, facilitando o dimensionamento horizontal.
+Modularização: Kubernetes oferece uma abordagem modular, permitindo que você construa e implante aplicativos de maneira modular usando contêineres. Isso facilita a implementação de microserviços e a criação de arquiteturas altamente modularizadas.
+Tolerância a falhas: Kubernetes é projetado para ser altamente tolerante a falhas. Ele pode automaticamente substituir contêineres ou nós com falhas, distribuir o tráfego de maneira equitativa e garantir alta disponibilidade.
+
+
+
