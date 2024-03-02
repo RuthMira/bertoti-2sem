@@ -47,17 +47,17 @@ O **trade-off** é um conceito essencial em diversas áreas, incluindo o desenvo
 
 # ATIVIDADE 3
 
-SLIDE 24
+### SLIDE 24
 E que Software ela se aplica?
-Trello
+Trello\
 Porque baseado nos Trade-off
 O Trello é uma ferramenta popular para gestão de tarefas e projetos. Ele utiliza um sistema de quadros, listas e cartões para organizar informações.
 Simplicidade: Sua interface intuitiva permite que você crie e gerencie tarefas de forma rápida e fácil.
 Baixo Custo: O Trello oferece um plano gratuito com recursos básicos, tornando-o acessível para pequenas equipes e projetos individuais.
 
-SLIDE 25
+### SLIDE 25
 E que Software ela se aplica?
-SQLite
+SQLite\
 Porque baseado nos Trade-off
 Custo Baixo: O SQLite é um banco de dados embutido que não requer configuração de servidor e é gratuito.
 Simplicidade Boa: O SQLite é simples de usar e não exige configurações complexas.
