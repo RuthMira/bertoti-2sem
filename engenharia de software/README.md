@@ -102,64 +102,82 @@ Tolerância a falhas: Kubernetes é projetado para ser altamente tolerante a fal
 # ATIVIDADE 4
 ### Escolha um sistema e: Defina sua arquitetura debatendo tradeoffs com os requisitos não funcionais comentados em aula
 
-**Sistema Escolhido:** Sistema de Gerenciamento de Banco de Dados Relacional (RDBMS).
+**Sistema Escolhido:** Sistema de Comércio Eletrônico (E-commerce).
 
 **Arquitetura:**
 
-* **Modelo de Dados:** Usa tabelas para organizar informações. Fácil de entender, mas pode ser inflexível para certos tipos de dados.
+* **Arquitetura de Microserviços:**
+   - **Vantagens:**
+     - **Escalabilidade:** Os microserviços podem ser escalados independentemente, permitindo que partes específicas do sistema lidem com mais carga.
+     - **Manutenibilidade:** Cada microserviço é uma entidade separada, facilitando atualizações e correções sem afetar o sistema como um todo.
+     - **Desenvolvimento Ágil:** Equipes podem trabalhar de forma independente em microserviços, acelerando o desenvolvimento.
 
-* **Cliente-Servidor:** Divide as tarefas entre um servidor que armazena dados e clientes que interagem com o banco de dados. Pode haver atrasos na comunicação entre eles.
+   - **Desvantagens:**
+     - **Complexidade da Rede:** A comunicação entre microserviços pode resultar em uma rede complexa, exigindo uma boa gestão e monitoramento.
+     - **Consistência Transacional:** Garantir transações consistentes em um ambiente distribuído pode ser desafiador.
 
-* **Escalabilidade:** Aumenta recursos em um único servidor (vertical) ou distribui dados em vários servidores (horizontal). Escalabilidade vertical tem limites práticos; escalabilidade horizontal pode ser mais desafiadora.
+* **Banco de Dados NoSQL para Dados Não-Estruturados:**
+   - **Vantagens:**
+     - **Flexibilidade de Esquema:** Os bancos de dados NoSQL são ideais para lidar com dados não estruturados, com a capacidade de ajustar esquemas conforme necessário.
+     - **Desempenho em Leitura e Gravação:** Podem oferecer melhor desempenho em casos de leitura e gravação intensiva, com modelos de dados otimizados para determinados casos de uso.
 
-* **Desempenho:** Boa leitura de dados, mas gravação pode ser afetada em ambientes concorrentes devido à necessidade de manter consistência.
-complicar a administração.
+   - **Desvantagens:**
+     - **Consistência Eventual:** Alguns bancos de dados NoSQL podem optar por consistência eventual, o que pode levar a leituras inconsistentes em ambientes altamente concorrentes.
+     - **Menos Suporte a Transações Complexas:** Funcionalidades avançadas de transação podem ser limitadas em comparação com bancos de dados relacionais.
 
-**Conclusão :**
-O RDBMS é ótimo para quem valoriza consistência e segurança. No entanto, é importante considerar a rigidez do modelo, possíveis atrasos na comunicação cliente-servidor e desafios de escalabilidade ao escolher este sistema para garantir a adequação aos requisitos específicos.
- 
+* **Escalabilidade Horizontal:**
+   - **Vantagens:**
+     - **Distribuição de Carga:** Permite a adição fácil de recursos, distribuindo a carga entre vários servidores.
+     - **Resiliência:** Em caso de falha, a presença de múltiplos nós permite manter a operação sem grandes interrupções.
+
+   - **Desvantagens:**
+     - **Complexidade de Configuração:** Configurar e gerenciar a escalabilidade horizontal pode ser mais complexo do que simplesmente aumentar os recursos de um servidor.
+     - **Custo:** Aumentar a infraestrutura horizontalmente pode resultar em custos mais elevados.
+
+**Conclusão:**
+A arquitetura escolhida, baseada em microserviços, banco de dados NoSQL para dados não estruturados e escalabilidade horizontal, é adequada para um sistema de comércio eletrônico. Ela oferece flexibilidade, escalabilidade e desempenho. A escolha depende dos requisitos específicos do sistema e das prioridades em termos de escalabilidade, consistência e manutenibilidade. 
 
 # ATIVIDADE 5
 ### Inicie seu diagrama de classes de uma das partes da arquitetura (escolha uma parte de backend por favor)
-Representar o backend do RDBMS. Irei definir as classes `Database`, `Table`, e `Column`.
+As classes serão `ProductService`, `Product`, e `Inventory`.
 
 ```plaintext
 +-------------------------------------+
-|              Database               |
+|          ProductService             |
 +-------------------------------------+
-| - name: string                      |
-| - tables: List<Table>                |
+| - productServiceId: string           |
 +-------------------------------------+
-| + createTable(tableName: string): void|
-| + dropTable(tableName: string): void |
-| + executeQuery(query: string): Result|
-+-------------------------------------+
-
-+-------------------------------------+
-|                Table                |
-+-------------------------------------+
-| - name: string                       |
-| - columns: List<Column>              |
-+-------------------------------------+
-| + addColumn(columnName: string, dataType: DataType): void|
-| + removeColumn(columnName: string): void|
+| + createProduct(name: string, price: decimal, quantity: int): Product |
+| + updateProduct(product: Product): void |
+| + deleteProduct(productId: string): void |
+| + getProducts(): List<Product>       |
+| + getProductById(productId: string): Product |
 +-------------------------------------+
 
 +-------------------------------------+
-|               Column                |
+|               Product               |
 +-------------------------------------+
+| - productId: string                  |
 | - name: string                       |
-| - dataType: DataType                 |
-| - isPrimaryKey: boolean              |
-| - isForeignKey: boolean              |
+| - price: decimal                     |
+| - quantity: int                      |
 +-------------------------------------+
-| + setPrimaryKey(): void             |
-| + setForeignKey(referencedTable: Table, referencedColumn: Column): void|
+| + getProductDetails(): string        |
++-------------------------------------+
+
++-------------------------------------+
+|              Inventory               |
++-------------------------------------+
+| - products: List<Product>            |
++-------------------------------------+
+| + addProduct(product: Product): void |
+| + removeProduct(productId: string): void |
+| + getProductInventory(): List<Product> |
 +-------------------------------------+
 ```
 
-Neste diagrama simplificado:
+Explicações:
 
-- `Database` possui métodos para criar e remover tabelas, além de executar consultas no banco de dados.
-- `Table` representa uma tabela no banco de dados e contém métodos para adicionar e remover colunas.
-- `Column` representa uma coluna em uma tabela e inclui informações sobre o tipo de dado, se é chave primária ou estrangeira.
+- `ProductService`: Responsável por gerenciar os produtos, incluindo a criação, atualização, exclusão e recuperação de informações.
+- `Product`: Representa um produto, contendo informações como nome, preço e quantidade disponível. O método `getProductDetails` retorna uma descrição detalhada do produto.
+- `Inventory`: Mantém uma lista de produtos disponíveis no estoque e fornece métodos para adicionar, remover e obter o inventário atual.
