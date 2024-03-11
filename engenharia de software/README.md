@@ -99,3 +99,55 @@ Tolerância a falhas: Kubernetes é projetado para ser altamente tolerante a fal
 
 
 
+# ATIVIDADE 4
+### Escolha um sistema e: Defina sua arquitetura debatendo tradeoffs com os requisitos não funcionais comentados em aula
+
+**Sistema Escolhido:** Sistema de Gerenciamento de Banco de Dados Relacional (RDBMS).
+
+**Arquitetura Simples:**
+
+* **Modelo de Dados:** Usa tabelas para organizar informações. Fácil de entender, mas pode ser inflexível para certos tipos de dados.
+
+* **Cliente-Servidor:** Divide as tarefas entre um servidor que armazena dados e clientes que interagem com o banco de dados. Pode haver atrasos na comunicação entre eles.
+
+* **Consistência ACID:** Garante transações seguras e consistentes, mas pode diminuir o desempenho em comparação com sistemas que priorizam a disponibilidade.
+
+* **Escalabilidade:** Aumenta recursos em um único servidor (vertical) ou distribui dados em vários servidores (horizontal). Escalabilidade vertical tem limites práticos; escalabilidade horizontal pode ser mais desafiadora.
+
+* **Desempenho:** Boa leitura de dados, mas gravação pode ser afetada em ambientes concorrentes devido à necessidade de manter consistência.
+
+* **Segurança e Controle de Acesso:** Oferece forte segurança e controle de acesso, permitindo configurações detalhadas. Isso é crucial para proteção dos dados, mas pode complicar a administração.
+
+**Conclusão :**
+O RDBMS é ótimo para quem valoriza consistência e segurança. No entanto, é importante considerar a rigidez do modelo, possíveis atrasos na comunicação cliente-servidor e desafios de escalabilidade ao escolher este sistema para garantir a adequação aos requisitos específicos.
+ 
+
+# ATIVIDADE 5
+### Inicie seu diagrama de classes de uma das partes da arquitetura (escolha uma parte de backend por favor)
++--------------------------------+
+|           Backend               |
++--------------------------------+
+| - UserController               |
+| - AuthenticationService       |
+| - UserRepository               |
++--------------------------------+
+
+Certamente! Vamos começar com um esboço básico do diagrama de classes para uma parte do backend de um sistema. Vou considerar uma aplicação web simples que envolve usuários, autenticação e armazenamento de informações. Lembre-se de que este é um exemplo simplificado, e um sistema real pode ter uma estrutura mais complexa.
+
+```plaintext
++--------------------------------+
+|           Backend               |
++--------------------------------+
+| - UserController               |
+| - AuthenticationService       |
+| - UserRepository               |
++--------------------------------+
+```
+
+1. **Backend:** Representa a camada geral do backend, que contém as principais classes e lógica de negócios.
+
+2. **UserController:** Responsável por lidar com operações relacionadas aos usuários, como cadastro, busca e atualização. Pode interagir com o `UserRepository` para acessar ou armazenar dados de usuários.
+
+3. **AuthenticationService:** Cuida da autenticação de usuários. Pode envolver lógica para verificar credenciais, gerar tokens de acesso, etc.
+
+4. **UserRepository:** Responsável pelo acesso ao banco de dados para operações relacionadas aos usuários. Pode conter métodos para buscar, salvar, atualizar e excluir registros de usuários.
