@@ -155,7 +155,7 @@ As classes serão `ProductService`, `Product`, e `Inventory`.
 +-------------------------------------+
 
 +-------------------------------------+
-|               Product               |
+|               Product              |
 +-------------------------------------+
 | - productId: string                  |
 | - name: string                       |
@@ -180,4 +180,47 @@ Explicações:
 
 - `ProductService`: Responsável por gerenciar os produtos, incluindo a criação, atualização, exclusão e recuperação de informações.
 - `Product`: Representa um produto, contendo informações como nome, preço e quantidade disponível. O método `getProductDetails` retorna uma descrição detalhada do produto.
-- `Inventory`: Mantém uma lista de produtos disponíveis no estoque e fornece métodos para adicionar, remover e obter o inventário atual.
+- `Inventory`: Mantém uma lista de produtos disponíveis no estoque e fornece métodos para adicionar, remover produtos do inventário e obter o inventário atual.
+
+# ATIVIDADE 6
+
+### Funcionamento do Sistema
+
+O sistema consiste em um sistema de gerenciamento de inventário de produtos, com as seguintes classes principais:
+
+#### 1. Classe `Produto`
+
+A classe `Produto` representa um produto no inventário e possui os seguintes atributos:
+
+- `idProduto`: identificador único do produto.
+- `nome`: nome do produto.
+- `preco`: preço do produto.
+- `quantidade`: quantidade disponível do produto.
+
+Além disso, a classe `Produto` possui métodos para obter e definir os valores dos atributos e um método `detalhesProduto()` para retornar uma representação detalhada do produto.
+
+#### 2. Classe `Inventario`
+
+A classe `Inventario` representa o inventário de produtos e possui os seguintes métodos:
+
+- `adicionarProduto(Produto produto)`: adiciona um produto ao inventário.
+- `removerProduto(String idProduto)`: remove um produto do inventário com base no ID do produto.
+- `listarProdutos()`: retorna uma lista de todos os produtos no inventário.
+- `getProdutoPorId(String idProduto)`: retorna um produto específico com base no ID do produto.
+
+Essas classes trabalham juntas para fornecer funcionalidades de gerenciamento de inventário.
+
+
+# ATIVIDADE 7
+
+Na `Main`, são realizados os seguintes testes:
+
+1. **Adicionar Produtos**: São criados alguns produtos de teste usando o serviço de produto e adicionados ao inventário.
+2. **Listar Produtos**: Os produtos no inventário são listados para verificar se foram adicionados corretamente.
+3. **Atualizar Produto**: Um produto é atualizado alterando seu nome e preço.
+4. **Listar Produtos Após Atualização**: Os produtos no inventário são listados novamente para verificar se a atualização foi bem-sucedida.
+5. **Remover Produto**: Um produto é removido do inventário.
+6. **Listar Produtos Após Remoção**: Os produtos no inventário são listados novamente para verificar se o produto foi removido corretamente.
+7. **Buscar Produto por ID**: Um produto é buscado pelo ID para verificar se a funcionalidade de busca está funcionando corretamente.
+
+Esses testes garantem que as funcionalidades de adicionar, atualizar, remover e buscar produtos no inventário estejam funcionando conforme o esperado.
