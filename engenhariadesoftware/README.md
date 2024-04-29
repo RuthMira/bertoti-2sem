@@ -210,6 +210,24 @@ A classe `Inventario` representa o inventário de produtos e possui os seguintes
 
 Essas classes trabalham juntas para fornecer funcionalidades de gerenciamento de inventário.
 
+Claro! Aqui está uma versão melhorada do texto sobre a classe `Servicoproduto`:
+
+### 3. Classe `Servicoproduto`
+
+A classe `Servicoproduto` é responsável por gerenciar os produtos do inventário. Ela interage com a classe `Inventario` para manter o controle dos produtos disponíveis. As principais funcionalidades oferecidas por esta classe são:
+
+- **Criação de Produto**: O método `criarProduto` permite a criação de um novo produto com um nome, preço e quantidade específicos. Ele verifica se os parâmetros fornecidos são válidos e, em seguida, gera um ID exclusivo para o produto antes de adicioná-lo à lista de produtos e ao inventário.
+
+- **Atualização de Produto**: O método `atualizarProduto` permite a atualização das informações de um produto existente. Ele encontra o produto na lista pelo ID e atualiza seu nome, preço e quantidade com os novos valores fornecidos.
+
+- **Exclusão de Produto**: O método `deletarProduto` remove um produto da lista de produtos e do inventário com base em seu ID.
+
+- **Obtenção de Lista de Produtos**: O método `getProdutos` retorna uma lista de todos os produtos atualmente gerenciados pela classe.
+
+- **Obtenção de Produto por ID**: O método `getProdutoPorId` permite a recuperação de um produto específico com base em seu ID.
+
+Essa classe desempenha um papel fundamental no controle e na manipulação dos produtos do inventário, garantindo que as operações de criação, atualização e exclusão sejam realizadas de maneira adequada e coordenada com o inventário.
+
 
 # ATIVIDADE 7
 
