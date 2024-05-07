@@ -139,48 +139,10 @@ A arquitetura escolhida, baseada em microserviços, banco de dados NoSQL para da
 
 # ATIVIDADE 5
 ### Inicie seu diagrama de classes de uma das partes da arquitetura (escolha uma parte de backend por favor)
-As classes serão `ProductService`, `Product`, e `Inventory`.
+As classes serão `ProdutoServico`, `Produto`, e `Inventario`.
 
-```plaintext
-+-------------------------------------+
-|          ProductService             |
-+-------------------------------------+
-| - productServiceId: string           |
-+-------------------------------------+
-| + createProduct(name: string, price: decimal, quantity: int): Product |
-| + updateProduct(product: Product): void |
-| + deleteProduct(productId: string): void |
-| + getProducts(): List<Product>       |
-| + getProductById(productId: string): Product |
-+-------------------------------------+
+![Diagrama de Classes](./img/Diagrama%20de%20classe.jpg)
 
-+-------------------------------------+
-|               Product              |
-+-------------------------------------+
-| - productId: string                  |
-| - name: string                       |
-| - price: decimal                     |
-| - quantity: int                      |
-+-------------------------------------+
-| + getProductDetails(): string        |
-+-------------------------------------+
-
-+-------------------------------------+
-|              Inventory               |
-+-------------------------------------+
-| - products: List<Product>            |
-+-------------------------------------+
-| + addProduct(product: Product): void |
-| + removeProduct(productId: string): void |
-| + getProductInventory(): List<Product> |
-+-------------------------------------+
-```
-
-Explicações:
-
-- `ProductService`: Responsável por gerenciar os produtos, incluindo a criação, atualização, exclusão e recuperação de informações.
-- `Product`: Representa um produto, contendo informações como nome, preço e quantidade disponível. O método `getProductDetails` retorna uma descrição detalhada do produto.
-- `Inventory`: Mantém uma lista de produtos disponíveis no estoque e fornece métodos para adicionar, remover produtos do inventário e obter o inventário atual.
 
 # ATIVIDADE 6
 
@@ -230,15 +192,9 @@ Essa classe desempenha um papel fundamental no controle e na manipulação dos p
 
 
 # ATIVIDADE 7
+### Realizar testes Unitários e Automatizados para as minhas classes.
 
-Na `Main`, são realizados os seguintes testes:
+No `Teste` foram criados testes automatizados para todas as classes
 
-1. **Adicionar Produtos**: São criados alguns produtos de teste usando o serviço de produto e adicionados ao inventário.
-2. **Listar Produtos**: Os produtos no inventário são listados para verificar se foram adicionados corretamente.
-3. **Atualizar Produto**: Um produto é atualizado alterando seu nome e preço.
-4. **Listar Produtos Após Atualização**: Os produtos no inventário são listados novamente para verificar se a atualização foi bem-sucedida.
-5. **Remover Produto**: Um produto é removido do inventário.
-6. **Listar Produtos Após Remoção**: Os produtos no inventário são listados novamente para verificar se o produto foi removido corretamente.
-7. **Buscar Produto por ID**: Um produto é buscado pelo ID para verificar se a funcionalidade de busca está funcionando corretamente.
 
-Esses testes garantem que as funcionalidades de adicionar, atualizar, remover e buscar produtos no inventário estejam funcionando conforme o esperado.
+
