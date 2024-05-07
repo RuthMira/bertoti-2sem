@@ -172,9 +172,7 @@ A classe `Inventario` representa o inventário de produtos e possui os seguintes
 
 Essas classes trabalham juntas para fornecer funcionalidades de gerenciamento de inventário.
 
-Claro! Aqui está uma versão melhorada do texto sobre a classe `Servicoproduto`:
-
-### 3. Classe `Servicoproduto`
+#### 3. Classe `Servicoproduto`
 
 A classe `Servicoproduto` é responsável por gerenciar os produtos do inventário. Ela interage com a classe `Inventario` para manter o controle dos produtos disponíveis. As principais funcionalidades oferecidas por esta classe são:
 
