@@ -189,10 +189,16 @@ A classe `Servicoproduto` é responsável por gerenciar os produtos do inventár
 Essa classe desempenha um papel fundamental no controle e na manipulação dos produtos do inventário, garantindo que as operações de criação, atualização e exclusão sejam realizadas de maneira adequada e coordenada com o inventário.
 
 
-# ATIVIDADE 7
-### Realizar testes Unitários e Automatizados para as minhas classes.
 
-No `Teste` foram criados testes automatizados para todas as classes
+á fazer
+
+# ATIVIDADE 7
+### Realizar testes Unitários e Automatizados para as minhas classes. [CRIAR PROJETO J. UNITY]
+
+# ATIVIDADE 8
+### Criar Diagrama de Caso de Uso *****
+
+
 
 
 
