@@ -47,57 +47,73 @@ O **trade-off** é um conceito essencial em diversas áreas, incluindo o desenvo
 
 # ATIVIDADE 3
 
-### SLIDE 24
+### SLIDE 24 - Arquitetura em Camadas: Simplicidade e Escalabilidade
+
 E que Software ela se aplica?
-Trello\
-Porque baseado nos Trade-off
-O Trello é uma ferramenta popular para gestão de tarefas e projetos. Ele utiliza um sistema de quadros, listas e cartões para organizar informações.
-Simplicidade: Sua interface intuitiva permite que você crie e gerencie tarefas de forma rápida e fácil.
-Baixo Custo: O Trello oferece um plano gratuito com recursos básicos, tornando-o acessível para pequenas equipes e projetos individuais.
+A arquitetura em camadas é amplamente usada em muitos tipos de software devido às suas vantagens em termos de organização, manutenção e escalabilidade. É particularmente comum em aplicações empresariais, sistemas de gestão de conteúdo, e-commerce e aplicações web.
 
-### SLIDE 25
+Porque baseado nos Trade-off
+- **Simplicidade**: A divisão clara entre diferentes camadas facilita a compreensão e o desenvolvimento do sistema.
+- **Manutenção**: As alterações em uma camada geralmente não afetam as outras, tornando o sistema mais fácil de manter e atualizar.
+- **Escalabilidade**: Cada camada pode ser escalada de forma independente, permitindo que o sistema suporte um número crescente de usuários ou processos.
+- **Reutilização**: Componentes em diferentes camadas podem ser reutilizados em outros sistemas ou aplicações.
+- **Isolamento**: A separação de preocupações permite que diferentes equipes trabalhem em camadas específicas sem interferências.
+
+### SLIDE 25 - Arquitetura de Pipeline: Simplicidade e Escalabilidade
+
 E que Software ela se aplica?
-SQLite\
-Porque baseado nos Trade-off
-Custo Baixo: O SQLite é um banco de dados embutido que não requer configuração de servidor e é gratuito.
-Simplicidade Boa: O SQLite é simples de usar e não exige configurações complexas.
-Ruim em Escala e Tolerância a Falhas: No entanto, o SQLite não é adequado para sistemas altamente concorrentes ou que precisam de alta escalabilidade e tolerância a falhas.
+A arquitetura de pipeline é usada em sistemas que necessitam de processamento sequencial de dados, onde cada etapa do pipeline realiza uma transformação específica antes de passar os dados para a próxima etapa. É comumente utilizada em processamento de streams, ETL (Extract, Transform, Load), processamento de imagens, compiladores e algumas aplicações de machine learning
 
-### SLIDE 26
+Porque baseado nos Trade-off
+- **Simplicidade**: Cada estágio do pipeline realiza uma função específica, o que facilita o desenvolvimento e a compreensão do sistema.
+- **Modularidade**: As etapas do pipeline podem ser desenvolvidas, testadas e mantidas independentemente.
+- **Escalabilidade**: Novas etapas podem ser adicionadas ao pipeline conforme necessário, e cada etapa pode ser escalada separadamente.
+- **Reutilização**: Componentes do pipeline podem ser reutilizados em diferentes pipelines ou aplicações.
+
+### SLIDE 26 - Arquitetura Microkernel: Overall Cost e Elasticity
+
 E que Software ela se aplica?
-Jekyll\
-Porque baseado nos Trade-off
-Custo Baixo: O Jekyll é um gerador de sites estáticos de código aberto e gratuito.
-Simplicidade Boa: Ele permite criar sites estáticos com facilidade, sem a necessidade de um servidor de banco de dados.
-Ruim em Escala e Tolerância a Falhas: No entanto, o Jekyll não é adequado para sites dinâmicos ou com grande volume de tráfego.
+A arquitetura Microkernel, também conhecida como arquitetura de plug-in, é comumente usada em sistemas que precisam de uma base mínima e extensível, com funcionalidades adicionais fornecidas por módulos ou plug-ins. É frequentemente aplicada em sistemas operacionais, servidores de aplicação, sistemas de gerenciamento de conteúdo (CMS) e geradores de sites estáticos.
 
-### SLIDE 27
+Porque baseado nos Trade-off
+- **Custo Baixo**: A base do microkernel é leve e pode ser desenvolvida com menos recursos, reduzindo o custo inicial.
+- **Elasticidade**: Permite adicionar ou remover funcionalidades facilmente através de plug-ins, adaptando-se às necessidades específicas dos usuários.
+- **Simplicidade**: A arquitetura central mínima é simples e fácil de entender, permitindo que os desenvolvedores se concentrem nas funcionalidades específicas dos plug-ins.
+- **Manutenabilidade**: A modularidade facilita a manutenção e atualização do sistema, pois os plug-ins podem ser modificados independentemente do núcleo.
+
+
+### SLIDE 27 -Arquitetura Baseada em Serviços: Overall Cost e Elasticity
+
 E que Software ela se aplica?
-Spring Boot\
-Porque baseado nos Trade-off
-Deployability (Implantação): O Spring Boot é um framework Java que simplifica a implantação de aplicativos. Ele incorpora um servidor embutido (como o Tomcat) e oferece opções de empacotamento (como JAR ou WAR) para facilitar a implantação.
-Modularidade: O Spring Boot permite criar aplicativos modulares usando módulos Spring. Você pode escolher os módulos específicos necessários para o seu projeto.
-Custo: O Spring Boot é de código aberto e gratuito.
-Testabilidade: O Spring Boot oferece suporte a testes unitários e integração, permitindo que você escreva testes robustos para suas funcionalidades.
+A arquitetura baseada em serviços (Service-Oriented Architecture, SOA) é amplamente utilizada em sistemas empresariais complexos, aplicações web, plataformas de integração e ambientes de microserviços. Esta arquitetura permite que diferentes serviços de negócios sejam desenvolvidos, implantados e gerenciados de forma independente, promovendo a flexibilidade e a escalabilidade.
 
-### SLIDE 28
+Porque baseado nos Trade-off
+- **Deployability (Implantação)**: Serviços podem ser desenvolvidos, implantados e escalados de forma independente, facilitando a gestão de lançamentos e atualizações contínuas.
+- **Elasticidade**: Permite que os serviços sejam dimensionados horizontalmente para atender à demanda, proporcionando alta elasticidade e resiliência.
+- **Modularidade**: Cada serviço pode ser desenvolvido com uma funcionalidade específica, promovendo a modularidade e a reutilização de componentes.
+- **Interoperabilidade**: Facilita a integração entre serviços desenvolvidos em diferentes tecnologias e linguagens de programação.
+
+### SLIDE 28 - Arquitetura Serverless: Simplicity e Evolutionary
+
 E que Software ela se aplica?
-Hadoop (HDFS e MapReduce)\
-Porque baseado nos Trade-off
-Complexidade: O ecossistema Hadoop, incluindo o HDFS (Hadoop Distributed File System) e o MapReduce, é poderoso, mas também complexo. Ele é usado para processamento distribuído de grandes volumes de dados.
-Testabilidade: Testar aplicativos MapReduce pode ser complicado, pois envolve a divisão de tarefas em etapas de mapeamento e redução.
+A arquitetura serverless é utilizada em sistemas que requerem execução eficiente de funções e serviços em resposta a eventos, sem a necessidade de gerenciamento de infraestrutura. É comumente aplicada em aplicações web, processamento de dados em tempo real, automação de workflows e integração de sistemas.
 
-### SLIDE 29
+Porque baseado nos Trade-off
+- **Simplicidade**: Desenvolvedores podem se concentrar no código e na lógica de negócios sem se preocupar com a administração de servidores.
+- **Escalabilidade Automática**: A infraestrutura serverless escala automaticamente para lidar com a demanda, oferecendo elasticidade e eficiência de recursos.
+- **Custo Eficiente**: Você paga apenas pelo tempo de execução das funções, reduzindo custos operacionais, especialmente para cargas de trabalho irregulares ou esporádicas.
+- **Rapidez de Desenvolvimento**: Facilita a rápida prototipagem e implementação de funcionalidades, acelerando o ciclo de desenvolvimento.
+
+### SLIDE 29 - Arquitetura de Microsserviços: Modularidade e Overall Cost
+
 E que Software ela se aplica?
-Kubernetes\
+A arquitetura de microsserviços é usada em sistemas que exigem alta modularidade, escalabilidade e flexibilidade. É particularmente adequada para grandes aplicações empresariais, plataformas de e-commerce, serviços financeiros, e qualquer ambiente que precise de desenvolvimento e implantação contínuos de funcionalidades.
+
 Porque baseado nos Trade-off
-Custo: Implementar e manter o Kubernetes pode envolver custos significativos, especialmente em termos de recursos humanos qualificados. No entanto, os benefícios de escalabilidade e tolerância a falhas podem justificar esses custos.
-Complexidade: Kubernetes é uma plataforma robusta e poderosa, mas isso também significa que é complexo. A curva de aprendizado pode ser íngreme, mas existem muitos recursos e comunidades ativas para suporte.
-Escalabilidade: Kubernetes é conhecido por sua capacidade de escalar aplicativos de maneira eficiente. Ele automatiza a implantação, a escala e a gestão de aplicativos em contêineres, facilitando o dimensionamento horizontal.
-Modularização: Kubernetes oferece uma abordagem modular, permitindo que você construa e implante aplicativos de maneira modular usando contêineres. Isso facilita a implementação de microserviços e a criação de arquiteturas altamente modularizadas.
-Tolerância a falhas: Kubernetes é projetado para ser altamente tolerante a falhas. Ele pode automaticamente substituir contêineres ou nós com falhas, distribuir o tráfego de maneira equitativa e garantir alta disponibilidade.
-
-
+- **Modularidade**: Cada serviço é desenvolvido de forma independente, permitindo a construção e manutenção de aplicativos complexos com componentes modulares e reutilizáveis.
+- **Escalabilidade**: Permite escalar cada serviço de forma independente, proporcionando uma escalabilidade eficiente e uso otimizado de recursos.
+- **Resiliência**: A falha em um serviço não necessariamente afeta outros serviços, aumentando a tolerância a falhas e a disponibilidade.
+- **Agilidade**: Facilita o desenvolvimento e implantação contínuos, permitindo que diferentes equipes trabalhem simultaneamente em diferentes serviços.
 
 # ATIVIDADE 4
 ### Escolha um sistema e: Defina sua arquitetura debatendo tradeoffs com os requisitos não funcionais comentados em aula
