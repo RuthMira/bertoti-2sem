@@ -212,7 +212,7 @@ Essa classe desempenha um papel fundamental no controle e na manipulação dos p
 ### Realizar testes Unitários e Automatizados para as minhas classes. [CRIAR PROJETO J. UNITY]
 
 # ATIVIDADE 8
-![Diagrama de Classe de Uso](./img/Diagrama%20Caso%20de%20Uso.jpg)
+![Diagrama de Classe de Uso](./img/Diagrama%20de%20Classe%20de%20uso.jpg)
 
 
 

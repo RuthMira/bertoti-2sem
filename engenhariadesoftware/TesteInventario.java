@@ -1,4 +1,4 @@
-package engenhariadesoftware.src;
+
 
 // Adicione a dependência JUnit ao seu projeto, se ainda não estiver presente. Você pode fazer isso manualmente ou através de uma ferramenta de gerenciamento de dependências, como Maven ou Gradle.
 // Crie uma classe de teste para a classe que você deseja testar. Nomeie essa classe de acordo com o padrão de nomenclatura do JUnit (por exemplo, "NomeDaClasseTest").
