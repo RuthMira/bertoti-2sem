@@ -157,7 +157,7 @@ A arquitetura escolhida, baseada em microserviços, banco de dados NoSQL para da
 ### Inicie seu diagrama de classes de uma das partes da arquitetura (escolha uma parte de backend por favor)
 As classes serão `ProdutoServico`, `Produto`, e `Inventario`.
 
-![Diagrama de Classes](./img/Diagrama%20de%20classe.jpg)
+![Diagrama de Classes](./src/img/Diagrama%20de%20classe.jpg)
 
 
 # ATIVIDADE 6
@@ -212,7 +212,7 @@ Essa classe desempenha um papel fundamental no controle e na manipulação dos p
 ### Realizar testes Unitários e Automatizados para as minhas classes. [CRIAR PROJETO J. UNITY]
 
 # ATIVIDADE 8
-![Diagrama de Classe de Uso](./img/Diagrama%20de%20Classe%20de%20uso.jpg)
+![Diagrama de Classe de Uso](./src/img/Diagrama%20de%20Classe%20de%20uso.jpg)
 
 
 
